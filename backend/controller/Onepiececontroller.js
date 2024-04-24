@@ -74,6 +74,7 @@ const updateCharacter = async(req, res) => {
         ...req.body
     })
     
+    
     if(!merry) {
         return res.status(400).json({error: 'No such character'})
     }
