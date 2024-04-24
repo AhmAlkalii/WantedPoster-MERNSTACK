@@ -1,20 +1,31 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import Card from 'react-bootstrap/Card';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 
-export const Characterlist = ({ character }) => {
+export const Characterlist = ({ characters }) => {
   return (
-    <div className='secondcard' key={character._id}>
-        <Link to={`/character/${character._id}`} state={{character: character}} style={{textDecoration: 'none'}}>
-            <Card style={{ width: '20rem', backgroundColor: '#FFC8C8', borderWidth: 3, marginBottom: 10 }}>
-                <Card.Body>            
-                        <Card.Title>{character.name}</Card.Title>
-                    <Card.Text>Rating: {character.rating}</Card.Text>
-                </Card.Body>
-            </Card>     
-        </Link>
-                       
+    <div className="character-grid">
+      {characters.map((character) => (
+        <div className="character-item" key={character._id}>
+          <Link
+            to={`/character/${character._id}`}
+            state={{ character: character }}
+            style={{ textDecoration: 'none', color: 'black' }}
+          >
+            <div className="wanted-poster">
+              <div className="poster-header">
+                <h1>Wanted</h1>
+              </div>
+              <div className="poster-image">
+                <img src={character.image} alt="Wanted" />
+              </div>
+              <div className="poster-details">
+                <h2>{character.name}</h2>
+              </div>
+            </div>
+          </Link>
+        </div>
+      ))}
     </div>
-  )
-}
+  );
+};

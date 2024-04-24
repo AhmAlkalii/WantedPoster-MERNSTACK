@@ -21,10 +21,7 @@ body {
 
 .cardcontainer{
     display: flex;
-    position: absolute;
-    justify-content: flex-end;
-    bottom: 50px;
-    padding-left: 740px;
+    justify-content: center;
 }
 
 .secondcard{
@@ -37,22 +34,40 @@ body {
 /* wanted poster */
 
 .wanted-poster {
-  width: 300px;
-  border: 2px solid black;
+  width: 400px;
+  border: 3px solid #1B4242;
   border-radius: 10px;
   padding: 10px;
   text-align: center;
   background-color: antiquewhite;
+
+}
+.wanted-poster-second {
+  width: 900px;
+  height: 800px;
+  border: 3px solid #1B4242;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  background-color: antiquewhite;
+
 }
 
 .poster-header {
-  border-bottom: 2px solid black;
   padding-bottom: 5px;
 }
 
 .poster-image img {
   width: 100%;
   max-height: 200px;
+  border: 3px solid lightyellow;
+  border-radius: 5px;
+  object-fit: cover;
+}
+.poster-image-second img {
+  width: 100%;
+  max-height: 100%;
+  border: 3px solid lightyellow;
   border-radius: 5px;
   object-fit: cover;
 }
@@ -66,3 +81,42 @@ body {
   font-size: 1.1rem;
   font-weight: normal;
 }
+
+
+.character-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); 
+  gap: 20px; 
+}
+
+.character-item {
+  margin-bottom: 20px; 
+}
+
+.character-item:hover {
+  transform: scale(1.10); 
+  transition: transform 0.3s ease; 
+}
+
+a:hover {
+  color: #CD8D7A !important;
+}
+
+
+
+/* nav */
+
+li {
+  display: inline;
+  font-size: 19px;
+}
+ 
+.navs
+{
+  background-color: #1B4242;
+}
+
+.nav-item a:hover {
+  color: yellow; 
+}
+

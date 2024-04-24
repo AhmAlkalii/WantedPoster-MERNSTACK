@@ -27,12 +27,10 @@ export const Home = () => {
   return (
     <div className='home'>
         {
-            characters && characters.map( character => (
-                <Characterlist character={character} key={character._id}/>
-            ))
+          characters && <Characterlist characters={characters}/>
         }
         
-        <Characterform/>
+        {/* <Characterform/> */}
     </div>
   )
 }
