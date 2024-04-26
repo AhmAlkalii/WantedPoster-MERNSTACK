@@ -8,9 +8,7 @@ export const Nav = () => {
   return (
 
     <nav className="navbar navbar-expand-lg navs">
-      <div className='navbar-brand d-flex align-items-center mx-auto'>
-        
-      </div>
+      
       <img src={hat} alt="" width="84" height="63" className="me-2"/>
       <h1 className="navbar-brand" style={{fontSize:30}}>Posters</h1>
 
